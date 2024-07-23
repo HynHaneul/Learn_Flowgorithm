@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-23 09:18:30 PM"/>
+        <attribute name="created" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yMzswOToxMzo0NyBQTTsyNjU4"/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yMzswOToxODozMCBQTTsxOzI3NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <output expression="&quot;Truoc khi hoan doi a = &quot;&amp;a" newline="True"/>
+            <output expression="&quot;Truoc khi hoan doi b = &quot;&amp;b" newline="True"/>
+            <assign variable="a" expression="a + b"/>
+            <assign variable="b" expression="a - b"/>
+            <assign variable="a" expression="a - b"/>
+            <output expression="&quot;Sau khi hoan doi a = &quot;&amp;a" newline="True"/>
+            <output expression="&quot;Sau khi hoan doi b = &quot;&amp;b" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
