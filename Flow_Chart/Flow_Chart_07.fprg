@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-23 01:32:13 PM"/>
+        <attribute name="created" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0xODswODoyMjo0NCBQTTsyNjU4"/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yMzsxMTozMjo0MSBBTTsxO0RFTEw7REVTS1RPUC1HS0lSUEIzOzIwMjQtMDctMTg7MDg6MjI6NDQgUE07Rmxvd19DaGFydF8wNi5mcHJnOzcxOTA="/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yMzswMTozMjoxMyBQTTs4OzI3NTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, min, max" type="Integer" array="False" size=""/>
+            <assign variable="max" expression="0"/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="a[i]" expression="random(10)"/>
+                <assign variable="min" expression="a[0]"/>
+                <output expression="a[i]" newline="True"/>
+                <if expression="a[i] &gt; max">
+                    <then>
+                        <assign variable="max" expression="a[i]"/>
+                    </then>
+                    <else>
+                        <if expression="a[i] &lt; min">
+                            <then>
+                                <assign variable="min" expression="a[i]"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Mininium value: &quot; &amp;min" newline="True"/>
+            <output expression="&quot;Maxium value: &quot; &amp;max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
