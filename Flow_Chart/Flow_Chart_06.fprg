@@ -4,33 +4,37 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="DELL"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-07-23 11:19:02 AM"/>
+        <attribute name="saved" value="2024-07-23 04:43:06 PM"/>
         <attribute name="created" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0xODswODoyMjo0NCBQTTsyNjU4"/>
-        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yMzsxMToxOTowMiBBTTs0OzI3NDQ="/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yMzswMzo1Mjo1MSBQTTsyO0RFTEw7REVTS1RPUC1HS0lSUEIzOzIwMjQtMDctMTg7MDg6MjI6NDQgUE07Rmxvd19DaGFydF8wNi5mcHJnOzcyMTA="/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yMzswNDo0MzowNiBQTTs4OzI3NjY="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="i, sum, m, j, n" type="Integer" array="False" size=""/>
+            <declare name="i, sum, j, n" type="Integer" array="False" size=""/>
             <input variable="n"/>
             <declare name="a" type="Integer" array="True" size="n"/>
             <assign variable="sum" expression="0"/>
-            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
                 <assign variable="a[i]" expression="RANDOM(9)"/>
                 <output expression="a[i]" newline="True"/>
-                <if expression="a[i] &gt; 2">
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="a[i] &gt; 1">
                     <then>
-                        <assign variable="m" expression="a[i]"/>
-                        <declare name="b" type="Integer" array="True" size="m"/>
-                        <for variable="j" start="2" end="m-1" direction="inc" step="1">
-                            <assign variable="b[j]" expression="j"/>
-                            <if expression="a[i] % b[j] = 0">
+                        <assign variable="j" expression="2"/>
+                        <while expression="j &lt;= Sqrt(a[i])">
+                            <if expression="a[i] % j = 0">
                                 <then>
                                     <assign variable="a[i]" expression="0"/>
+                                    <assign variable="j" expression="Sqrt(a[i] + 1)"/>
                                 </then>
-                                <else/>
+                                <else>
+                                    <assign variable="j" expression="j + 1"/>
+                                </else>
                             </if>
-                        </for>
+                        </while>
                         <assign variable="sum" expression="sum + a[i]"/>
                     </then>
                     <else/>
