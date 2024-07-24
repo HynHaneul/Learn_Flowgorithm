@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DELL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-24 03:05:37 PM"/>
+        <attribute name="created" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNDswMjo1Mzo0NCBQTTsyNjUz"/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNDswMzowNTozNyBQTTsxOzI3NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, indexRemove" type="Integer" array="False" size=""/>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="a" type="Integer" array="True" size="n"/>
+            <assign variable="size" expression="sizeof(a) / sizeof(a[0])"/>
+            <for variable="i" start="indexRemove" end="n-1" direction="inc" step="1">
+                <assign variable="a[i]" expression="a[i+1]"/>
+            </for>
+            <assign variable="size" expression="size-1"/>
+            <output expression="&quot;Mang sau khi xoa:&quot;" newline="True"/>
+            <for variable="i" start="0" end="size" direction="inc" step="1">
+                <output expression="&quot;phan tu thu: &quot;&amp;a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
