@@ -4,14 +4,14 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="DELL"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-07-25 11:05:59 AM"/>
+        <attribute name="saved" value="2024-07-25 02:45:16 PM"/>
         <attribute name="created" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNTswOTo0MjoxMiBBTTsyNjM5"/>
-        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNTsxMTowNTo1OSBBTTsyOzI3NTE="/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNTswMjo0NToxNiBQTTszOzI3NjQ="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="i, n, j, index" type="Integer" array="False" size=""/>
+            <declare name="i, n, index" type="Integer" array="False" size=""/>
             <input variable="n"/>
             <declare name="a" type="Integer" array="True" size="n"/>
             <for variable="i" start="0" end="n-1" direction="inc" step="1">
