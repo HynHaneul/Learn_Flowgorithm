@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="DELL"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-07-24 05:12:41 PM"/>
+        <attribute name="saved" value="2024-07-26 02:55:11 PM"/>
         <attribute name="created" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNDswNDowMzo1MyBQTTsyNjUw"/>
-        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNDswNToxMjo0MSBQTTsyOzI3NTc="/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNjswMjo1NToxMSBQTTs0OzI3NjI="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -21,21 +21,22 @@
                 <input variable="a[i]"/>
             </for>
             <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="temp" expression="0"/>
                 <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
                     <if expression="a[i] == a[j]">
                         <then>
                             <assign variable="temp" expression="temp + 1"/>
-                            <if expression="temp &gt;= max">
-                                <then>
-                                    <assign variable="max" expression="temp"/>
-                                    <assign variable="maxt" expression="a[i]"/>
-                                </then>
-                                <else/>
-                            </if>
                         </then>
                         <else/>
                     </if>
                 </for>
+                <if expression="temp &gt;= max">
+                    <then>
+                        <assign variable="max" expression="temp"/>
+                        <assign variable="maxt" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
             </for>
             <output expression="&quot;ph&#7847;n t&#7917; l&#7863;p l&#7841;i nhi&#7873;u nh&#7845;t trong m&#7843;ng l&#224;: &quot;&amp;maxt" newline="True"/>
         </body>

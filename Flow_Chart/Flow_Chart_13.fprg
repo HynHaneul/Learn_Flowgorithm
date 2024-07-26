@@ -4,10 +4,10 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="DELL"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-07-25 04:09:24 PM"/>
-        <attribute name="created" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNTsxMTowNzo0NSBBTTsyNjM5"/>
-        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNTsxMToxNTo1NCBBTTsxO0RFTEw7REVTS1RPUC1HS0lSUEIzOzIwMjQtMDctMjU7MDk6NDI6MTIgQU07Rmxvd19DaGFydF8xMi5mcHJnOzcxNzU="/>
-        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNTswNDowOToyNCBQTTs4OzI3NzA="/>
+        <attribute name="saved" value="2024-07-26 03:45:38 PM"/>
+        <attribute name="created" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNjswMjo1NDowOCBQTTsyNjU2"/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNjswMjo1NTo1MiBQTTsyO0RFTEw7REVTS1RPUC1HS0lSUEIzOzIwMjQtMDctMjU7MTE6MDc6NDUgQU07Rmxvd19DaGFydF8xMy5mcHJnOzcxOTU="/>
+        <attribute name="edited" value="REVMTDtERVNLVE9QLUdLSVJQQjM7MjAyNC0wNy0yNjswMzo0NTozOCBQTTsxOzI3Njg="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -25,19 +25,23 @@
             <input variable="value"/>
             <output expression="&quot;Nhap vi tri can them: &quot;" newline="True"/>
             <input variable="index"/>
-            <for variable="j" start="m - 1" end="index + 1" direction="dec" step="1">
-                <if expression="j = index+1">
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="i == index">
                     <then>
-                        <assign variable="b[j]" expression="a[j - 1]"/>
-                        <assign variable="b[j-1]" expression="value"/>
+                        <assign variable="b[i+1]" expression="a[i]"/>
+                        <assign variable="b[i]" expression="value"/>
                     </then>
                     <else>
-                        <assign variable="b[j]" expression="a[j - 1]"/>
+                        <if expression="i &lt; index">
+                            <then>
+                                <assign variable="b[i]" expression="a[i]"/>
+                            </then>
+                            <else>
+                                <assign variable="b[i+1]" expression="a[i]"/>
+                            </else>
+                        </if>
                     </else>
                 </if>
-            </for>
-            <for variable="j" start="0" end="index-1" direction="inc" step="1">
-                <assign variable="b[j]" expression="a[j]"/>
             </for>
             <for variable="j" start="0" end="m-1" direction="inc" step="1">
                 <output expression="&quot;b[&quot;&amp;j&amp;&quot;]: &quot;&amp;b[j]" newline="True"/>
